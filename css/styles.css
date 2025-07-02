@@ -412,9 +412,9 @@ a {
 
 .footer-links {
   background-color: #2e2f42;
-  color: white;
+  color: var(--footer-text-color, #ffffff);
   padding: 100px 0;
-  }
+}
 .footer-container {
   display: flex;
   align-items: baseline;
@@ -452,17 +452,21 @@ a {
 .social-link {
   width: 100%;
   height: 100%;
-  background-color: var(--iris, #4d5ae5);
+  background-color: #4d5ae5;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer; 
+  border: none;    
+  outline: none;
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color:  #404bbf;
+  outline: none;
 }
 
 .social-icon {
@@ -498,17 +502,18 @@ a {
 }
 
 .footer-logo .logo-part {
-  color:#f4f4fd;
+  color: var(--footer-text-color, #f4f4fd);
 }
 
 .footer-text {
-  line-height: 1.5;
-  color: var(--footer-text-color);
   max-width: 312px;
   margin-top: 16px;
-  
+  font-size: 16px;           
+  font-weight: 500;         
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--footer-text-color);
 }
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -609,15 +614,17 @@ a {
 }
 
 .subscribe-input {
-  min-width: 264px;
+  width: 264px;               /* исправлено: добавлена фиксированная ширина */
   height: 40px;
-  padding: 8px 16px;
+  padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.5;
+  color: var(--footer-text-color);
+  font-size: 12px;            /* исправлено: размер шрифта */
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -631,29 +638,39 @@ a {
 }
 
 .subscribe-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  display: flex;                   /* добавлено */
+  justify-content: center;         /* добавлено */
+  align-items: center;             /* добавлено */
+  gap: 16px;                      /* если есть иконка */
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
-  color: #ffffff;
+  color: var(--footer-text-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 24px; /* чтобы текст был не прилеплен к краям */
 }
 
 .subscribe-btn:hover,
 .subscribe-btn:focus {
   background-color: #404bbf;
+  outline: none;
 }
 
 .subscribe-icon {
   fill: currentColor;
 }
-
+svg {
+  width: 24px;
+  height: 24px;
+}
 /* ---------- Modal window ---------- */
 .modal {
   position: relative;
