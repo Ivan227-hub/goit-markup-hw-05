@@ -188,26 +188,28 @@ a {
 
 .btn-services {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   min-width: 169px;
+  padding: 16px 32px;
+  border: 1px solid transparent; /* вместо border: none */
   border-radius: 4px;
   background-color: #4D5AE5;
-  color: white;
-  padding: 16px 32px;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  font-family: "Roboto", sans-serif;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-services:hover,
 .btn-services:focus {
-  background-color:#404BBF;
+  background-color: #404BBF;
+  border-color: #404BBF; /* добавлено для корректной анимации */
+  outline: none; /* по желанию */
 }
 
 .values-list {
@@ -587,6 +589,7 @@ a {
 }
 .modal-overlay.is-open{
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
 }
 .modal {
@@ -605,6 +608,7 @@ a {
   overflow-y: auto;       /* прокрутка при необходимости */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
+  visibility: hidden;
 }
 /* ---------- Subscription form ---------- */
 .subscribe-container {
@@ -678,12 +682,7 @@ svg {
   height: 24px;
 }
 /* ---------- Modal window ---------- */
-.modal {
-  position: relative;
-  width: 100%;
-  max-width: 408px;
-  padding: 72px 24px 24px;
-}
+
 
 .modal-close {
   position: absolute;
