@@ -1,5 +1,8 @@
 :root {
   --footer-text-color: #F4F4FD;
+  --primary-color: #4d5ae5;
+  --accent-color: #404bbf;
+  --icon-fill-color: #f4f4fd;
   }
 
 * {
@@ -193,8 +196,8 @@ a {
   padding: 16px 32px;
   border: 1px solid transparent; /* вместо border: none */
   border-radius: 4px;
-  background-color: #4D5AE5;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--icon-fill-color);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -841,7 +844,7 @@ svg {
 
 /* ---------- Privacy link ---------- */
 .privacy-link {
-  color: #4d5ae5;
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
