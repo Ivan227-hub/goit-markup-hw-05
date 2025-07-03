@@ -1,5 +1,5 @@
 :root {
-  --footer-text-color: #F4F4FD;
+  --footer-text-color:  #8e8f99;
   --primary-color: #4d5ae5;
   --accent-color: #404bbf;
   --icon-fill-color: #f4f4fd;
@@ -219,7 +219,7 @@ a {
   background-color: #404BBF;
   border-color: #404BBF;
   /* добавлено для корректной анимации */
-  outline: none;
+  outline: 2px solid var(--primary-color);
   /* по желанию */
 }
 
@@ -814,7 +814,7 @@ svg {
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  outline: transparent;
+   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
