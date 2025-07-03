@@ -724,10 +724,10 @@ svg {
 
 /* ---------- Modal window ---------- */
 .modal {
-  position: relative;
-  width: 100%;
-  max-width: 408px;
-  padding: 72px 24px 24px;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-close {
@@ -862,7 +862,7 @@ svg {
    font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--primary-color); /* #8e8f99 */
+  color: var(--footer-text-color); /* #8e8f99 */
 }
 
 .custom-checkbox {
