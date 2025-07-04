@@ -3,6 +3,10 @@
   --primary-color: #4d5ae5;
   --accent-color: #404bbf;
   --icon-fill-color: #f4f4fd;
+  --text-size-default: 16px;
+  --line-height-default: 1.5;
+  --letter-spacing-default: 0.02em;
+  --letter-spacing-btn: 0.04em;
 }
 
 * {
@@ -10,7 +14,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   font-weight: 400;
   color: #434455;
   background-color: #fff;
@@ -75,6 +79,12 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-size: var(--text-size-default);
+  line-height: var(--line-height-default);
+  letter-spacing: var(--letter-spacing-default);
 }
 
 .site-header {
@@ -200,7 +210,6 @@ a {
   min-width: 169px;
   padding: 16px 32px;
   border: 1px solid transparent;
-  /* вместо border: none */
   border-radius: 4px;
   background-color: var(--primary-color);
   color: var(--icon-fill-color);
@@ -208,19 +217,16 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--letter-spacing-btn);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-services:hover,
 .btn-services:focus {
   background-color: #404BBF;
-  border-color: #404BBF;
-  /* добавлено для корректной анимации */
-  outline: 2px solid var(--primary-color);
-  /* по желанию */
+
 }
 
 .values-list {
@@ -863,10 +869,10 @@ textarea.form-input {
   color: rgba(46, 47, 66, 0.4);
   outline: transparent;
 }
+
 textarea:focus,
 input:focus {
-  border-color: #4d5ae5;
-  outline: none;
+  outline: 2px solid #4d5ae5;
 }
 
 
