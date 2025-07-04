@@ -653,7 +653,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-left: auto;
+
   /* штовхаємо праворуч */
 }
 
@@ -709,8 +709,7 @@ p {
   color: #ffffff;
   cursor: pointer;
   background-color: #4d5ae5;
-  border: 1px solid transparent;
-  border-radius: 4px;
+   border-radius: 4px;
 }
 
 .subscribe-btn:hover,
@@ -721,6 +720,8 @@ p {
 
 .subscribe-icon {
   margin-left: 16px;
+    width: 24px;
+  height: 24px;
 }
 
 svg {
@@ -928,13 +929,17 @@ input:focus {
   padding: 16px 32px;
   background-color: #4d5ae5;
   color: #ffffff;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Roboto", sans-serif;
+  height: 56px ;
+  display: block; 
 }
 
 .submit-btn:hover,
