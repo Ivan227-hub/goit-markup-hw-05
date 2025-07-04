@@ -489,7 +489,8 @@
                         value="true" required />
                     <label class="form-agreement" for="user-privacy">
                         <span class="custom-checkbox">
-                            <svg class="checkbox-icon-privacy" width="10" height="8" aria-hidden="true" focusable="false">
+                            <svg class="checkbox-icon-privacy" width="10" height="8" aria-hidden="true"
+                                focusable="false">
                                 <use href="./images/icons.svg#icon-check"></use>
                             </svg>
                         </span>
@@ -509,24 +510,24 @@
                 <button class="submit-btn" type="submit">Send</button>
             </form>
 
-            <script>
-                (() => {
-                    const refs = {
-                        openModalBtn: document.querySelector('[data-modal-open]'),
-                        closeModalBtn: document.querySelector('[data-modal-close]'),
-                        modal: document.querySelector('[data-modal]'),
-                        body: document.body,
-                    };
+            <!-- Кнопка открытия модального окна -->
+            <label for="modal-toggle" class="open-btn">Open modal</label>
 
-                    refs.openModalBtn.addEventListener('click', toggleModal);
-                    refs.closeModalBtn.addEventListener('click', toggleModal);
+            <!-- Скрытый чекбокс-переключатель -->
+            <input type="checkbox" id="modal-toggle" hidden />
 
-                    function toggleModal() {
-                        refs.modal.classList.toggle('is-open');
-                        refs.body.classList.toggle('no-scroll');
-                    }
-                })();
-            </script>
+            <!-- Модальное окно -->
+            <div class="modal">
+                <div class="modal__card">
+                    <!-- Кнопка закрытия -->
+                    <label for="modal-toggle" class="modal__close" aria-label="Close">✕</label>
+
+                    <!-- Контент модального окна -->
+                    <h2>Modal title</h2>
+                    <p>Контент модального окна без JavaScript.</p>
+                </div>
+            </div>
+
 </body>
 
 </html>
