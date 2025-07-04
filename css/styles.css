@@ -81,7 +81,7 @@ a {
   text-decoration: none;
 }
 
-p {
+.modal p {
   font-size: var(--text-size-default);
   line-height: var(--line-height-default);
   letter-spacing: var(--letter-spacing-default);
@@ -869,7 +869,7 @@ textarea.form-input {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-  outline: transparent;
+  outline: none;
 }
 
 textarea:focus,
