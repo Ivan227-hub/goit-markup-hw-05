@@ -736,6 +736,7 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
 .modal-close {
@@ -927,7 +928,7 @@ input:focus {
   padding: 16px 32px;
   background-color: #4d5ae5;
   color: #ffffff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
