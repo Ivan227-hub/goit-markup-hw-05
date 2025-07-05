@@ -456,7 +456,6 @@ p {
 .social-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .social-title {
@@ -722,7 +721,6 @@ p {
   height: 24px;
 }
 
-
 svg {
   display: block;
   max-width: 100%;
@@ -730,7 +728,7 @@ svg {
 }
 
 /* ---------- Modal window ---------- */
-.modal-overlay {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -964,4 +962,3 @@ input:focus {
   /* Подчёркивание, если нужно */
    
 }
-
