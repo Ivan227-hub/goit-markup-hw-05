@@ -729,21 +729,70 @@ svg {
 }
 
 /* ---------- Modal window ---------- */
-/*изменила название*/
-.modal__card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
+
+/* Скрываем чекбоксы */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
+/* Кнопка открытия */
+.btn-open {
+  display: inline-block;
+  margin: 40px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #4d5ae5;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Модальное окно (по умолчанию скрыто) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(46, 47, 66, 0.4);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Показываем модалку, если чекбокс отмечен */
+#modal-toggle:checked ~ .modal-overlay {
+  display: flex;
+}
+
+/* Модальное окно */
+.modal {
+  position: relative;
+  background: #fff;
+  padding: 40px 30px 30px 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Кнопка закрытия */
 .modal-close {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -751,29 +800,26 @@ svg {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.modal-close:hover {
   background-color: #404bbf;
   border-color: #404bbf;
-  outline: none;
 }
 
 .modal-close svg {
   fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 0.3s;
 }
 
-.modal-close:hover svg,
-.modal-close:focus svg {
-  fill: #ffffff;
+.modal-close:hover svg {
+  fill: #fff;
 }
 
+/* Заголовок */
 .modal-title {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -781,175 +827,134 @@ svg {
   color: #2e2f42;
 }
 
-/* ---------- Form fields ---------- */
-.contact-form {
+/* Форма */
+.modal-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
-.form-field {
-  margin-bottom: 8px;
+/* Поля формы */
+.form-field,
+.form-comment {
+  margin-bottom: 16px;
 }
 
+/* Метки */
 .form-label {
   display: block;
-  margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--text-light, #8e8f99);
-  margin-bottom: 4px;
-  }
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2e2f42;
+}
 
+/* Обертка для input + иконки */
 .input-wrapper {
   position: relative;
- 
-
 }
 
-.input-wrapper svg {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-   margin-bottom: 16px;
-}
-
+/* Инпуты */
 .form-input {
   width: 100%;
-  height: 40px;
-  padding-left: 38px;
-  background-color: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  padding: 10px 40px 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  outline: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  outline: transparent;
-}
-
-.form-input::placeholder {
-  color: rgba(46, 47, 66, 0.4);
-}
-
-.input-icon-privacy {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-  /* чтобы иконка не мешала кликам */
-  fill: currentColor;
-  /* чтобы иконка наследовала цвет */
-  width: 18px;
-  height: 18px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
 }
 
 .form-input:focus {
   border-color: #4d5ae5;
+  outline: none;
 }
 
-.form-input:focus+.input-icon,
-.form-input:not(:placeholder-shown)+.input-icon {
-  fill: #4d5ae5;
+/* Иконки внутри input */
+.input-wrapper svg {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  fill: #999;
 }
 
-.form-input:focus+svg {
-  fill: #4d5ae5;
+/* Текстовое поле */
+.form-textarea {
+  min-height: 80px;
+  resize: vertical;
 }
 
-/* textarea */
-textarea.form-input {
-  height: 120px;
-  resize: none;
-  padding: 8px 16px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  outline: transparent;
-  
-}
-
-textarea:focus,
-input:focus {
-  outline: 2px solid #4d5ae5;
-}
-
-/* ---------- Checkbox ---------- */
-.form-agreement {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--footer-text-color);
-  /* #8e8f99 */
-}
-
-.custom-checkbox {
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
+/* Checkbox блок */
+.checkbox-wrapper {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
+}
+
+/* Кастомный чекбокс */
+.custom-checkbox {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Иконка галочки */
+.checkbox-icon-privacy {
+  position: absolute;
+  top: 4px;
+  left: 4px;
   fill: transparent;
-  margin-right: 8px;
+  transition: fill 0.2s;
 }
 
-.agree-checkbox:checked+.custom-checkbox {
-  background-color: var(--accent-color, #404bbf);
-  border: none;
-  fill: var(--checkbox-icon-color, #f4f4fd);
+/* При отмеченном чекбоксе показываем галочку */
+.agree-checkbox:checked + .form-agreement .custom-checkbox .checkbox-icon-privacy {
+  fill: #4d5ae5;
 }
 
-.agree-checkbox:checked+.form-agreement .custom-checkbox {
-  background-color: var(--accent-color);
-  /* #404bbf */
-  border: none;
-  fill: var(--icon-fill-color);
-  /* #F4F4FD */
+/* Текст соглашения */
+.form-agreement {
+  font-size: 14px;
+  color: #2e2f42;
+  cursor: pointer;
+  user-select: none;
 }
 
-/* ---------- Privacy link ---------- */
-.privacy-link {
-  color: var(--primary-color);
+.form-agreement a {
+  color: #4d5ae5;
+  text-decoration: none;
+}
+
+.form-agreement a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Submit ---------- */
+/* Кнопка отправки */
 .submit-btn {
-  align-self: center;
-  min-width: 169px;
-  padding: 16px 32px;
-  background-color: #4d5ae5;
-    color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  font-weight: 500;
+  margin-top: 12px;
+  padding: 12px 20px;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: "Roboto", sans-serif;
-  height: 56px ;
-  display: block; 
-  
+  transition: background-color 0.3s;
 }
 
 .submit-btn:hover,
 .submit-btn:focus {
   background-color: #404bbf;
-  
+  outline: none;
 }
+
 
 .no-scroll {
   overflow: hidden;
