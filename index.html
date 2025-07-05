@@ -481,45 +481,20 @@
                 </div>
 
                 <!-- Checkbox (без изменений) -->
-                <div class="checkbox-wrapper">
-  <!-- Чекбокс -->
-  <input
-    class="visually-hidden agree-checkbox"
-    type="checkbox"
-    id="user-privacy"
-    name="user-privacy"
-    value="true"
-    required
-  />
-
-  <!-- Увесь вміст обгорнуто в один <label> (✔ відповідає вимогам) -->
-  <label class="form-agreement" for="user-privacy">
-    <!-- SVG-позначка чекбокса -->
-    <span class="custom-checkbox">
-      <svg
-        class="checkbox-icon-privacy"
-        width="10"
-        height="8"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <use href="./images/icons.svg#icon-check"></use>
-      </svg>
-    </span>
-
-    <!-- Текст + посилання -->
-    <span>
-      I accept the terms and conditions outlined in the
-      <a
-        class="privacy-link"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Privacy Policy
-      </a>
-    </span>
-  </label>
+                <div class="checkbox-wrapper" style="margin-bottom: 24px;">
+                    <input class="visually-hidden agree-checkbox" type="checkbox" id="user-privacy" name="user-privacy"
+                        value="true" required />
+                    <label class="form-agreement" for="user-privacy">
+                        I accept the terms and conditions outlined in the
+  <a class="privacy-link" href="#"  target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                        <span class="custom-checkbox">
+                            <svg class="checkbox-icon-privacy" width="10" height="8" aria-hidden="true"
+                                focusable="false">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        </span>
+                       
+                    </label>
 
 
 
