@@ -15,7 +15,6 @@
         rel="stylesheet">
 </head>
 
-
 <body>
 
     <header class="site-header">
@@ -267,7 +266,6 @@
             </div>
         </section>
 
-
         <section class="portfolio-list section">
             <div class="container">
                 <h2 class="portfolio-link">Our Portfolio</h2>
@@ -375,149 +373,159 @@
                 </p>
             </div>
 
-            <div class="social-container">
-                <!--  SUBSCRIBE  -->
-                <div class="form-container">
-                    <p class="subscribe-text">Subscribe</p>
+           <div class="social-container">
+    <!-- SUBSCRIBE -->
+    <div class="form-container">
+        <!-- Используем заголовок для семантики -->
+        <h2 class="subscribe-text">Subscribe</h2>
 
-                    <form class="subscribe-form" name="subscribe" method="post" action="#">
-                        <label class="subscribe-label">
-                            <input class="subscribe-input" type="email" name="email" placeholder="E-mail" required />
-                        </label>
+        <form class="subscribe-form" name="subscribe" method="post" action="#">
+            <!-- Добавляем текст метки для input -->
+            <label class="subscribe-label" for="email-input">E-mail</label>
+            <input id="email-input" class="subscribe-input" type="email" name="email" placeholder="E-mail" required />
 
-                        <button class="subscribe-btn" type="submit">
-                            Subscribe
-                            <svg class="subscribe-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                                <use href="./images/icons.svg#icon-send"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-
-
-
-                <p class="social-title">Social media</p>
-                <ul class="social-list">
-                    <li class="social-item">
-                        <a class="social-link" href="#">
-                            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a class="social-link" href="#">
-                            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a class="social-link" href="#">
-                            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a class="social-link" href="#">
-                            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ========== MODAL ========== -->
-
-<!-- Скрытый чекбокс идёт перед модалкой -->
-<input type="checkbox" id="modal-toggle" class="visually-hidden" />
-
-<!-- Кнопка открытия — label для чекбокса -->
-<label for="modal-toggle" class="btn-open" data-modal-open>Open Modal</label>
-
-<!-- Модальное окно -->
-<div class="modal-overlay" data-modal>
-    <div class="modal">
-        <!-- Кнопка закрытия — label для чекбокса -->
-        <label for="modal-toggle" class="modal-close" aria-label="Close" data-modal-close>
-            <svg width="8" height="8" aria-hidden="true" focusable="false">
-                <use href="./images/icons.svg#icon-close"></use>
-            </svg>
-        </label>
-
-        <p class="modal-title">Leave your contacts and we will call you back</p>
-
-        <form class="modal-form" name="contact" method="post" action="#">
-            <!-- Name -->
-            <div class="form-field">
-                <label class="form-label" for="user-name">Name</label>
-                <div class="input-wrapper">
-                    <input class="form-input" id="user-name" name="user-name" type="text" required />
-                    <svg class="icon-people" width="18" height="24" aria-hidden="true" focusable="false">
-                        <use href="./images/icons.svg#icon-people"></use>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="form-field">
-                <label class="form-label" for="user-phone">Phone</label>
-                <div class="input-wrapper">
-                    <input class="form-input" id="user-phone" name="user-phone" type="tel" required />
-                    <svg class="icon-telefon" width="18" height="24" aria-hidden="true" focusable="false">
-                        <use href="./images/icons.svg#icon-telefon"></use>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Email -->
-            <div class="form-field">
-                <label class="form-label" for="user-email">Email</label>
-                <div class="input-wrapper">
-                    <input class="form-input" id="user-email" name="user-email" type="email" required />
-                    <svg class="icon-letter" width="18" height="24" aria-hidden="true" focusable="false">
-                        <use href="./images/icons.svg#icon-letter"></use>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Comment -->
-            <div class="form-comment">
-                <label class="form-label" for="user-comment">Comment</label>
-                <textarea class="form-input form-textarea" id="user-comment" name="user-comment"
-                    placeholder="Text input"></textarea>
-            </div>
-
-            <!-- Checkbox (без изменений) -->
-            <div class="checkbox-wrapper" style="margin-bottom: 24px;">
-                <input class="visually-hidden agree-checkbox" type="checkbox" id="user-privacy" name="user-privacy"
-                    value="true" required />
-                <label class="form-agreement" for="user-privacy">
-                    <span class="custom-checkbox">
-                        <svg class="checkbox-icon-privacy" width="10" height="8" aria-hidden="true"
-                            focusable="false">
-                            <use href="./images/icons.svg#icon-check"></use>
-                        </svg>
-                    </span>
-                    <span>
-                        I accept the terms and conditions outlined in the
-                        <a class="privacy-link" href="#" target="_blank" rel="noopener noreferrer">Privacy
-                            Policy</a>
-                    </span>
-                </label>
-            </div>
-
-            <!-- Submit -->
-            <button class="submit-btn" type="submit">Send</button>
+            <button class="subscribe-btn" type="submit">
+                Subscribe
+                <svg class="subscribe-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                    <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+            </button>
         </form>
     </div>
+
+    <!-- Заголовок соцсетей -->
+    <h2 class="social-title">Social media</h2>
+
+    <ul class="social-list">
+        <li class="social-item">
+            <a class="social-link" href="#" aria-label="Instagram">
+                <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="#" aria-label="Twitter">
+                <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="#" aria-label="Facebook">
+                <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="#" aria-label="LinkedIn">
+                <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
 </div>
 
+
+    <!-- ========== MODAL ========== -->
+    <div class="modal-overlay" data-modal>
+        <div class="modal">
+            <button class="modal-close" type="button" data-modal-close>
+                <svg width="8" height="8" aria-hidden="true" focusable="false">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+
+            <p class="modal-title">Leave your contacts and we will call you back</p>
+
+            <form class="modal-form" name="contact" method="post" action="#">
+                <!-- Name -->
+                <div class="form-field">
+                    <label class="form-label" for="user-name">Name</label>
+                    <div class="input-wrapper">
+                        <input class="form-input" id="user-name" name="user-name" type="text" required />
+                        <svg class="icon-people" width="18" height="24" aria-hidden="true" focusable="false">
+                            <use href="./images/icons.svg#icon-people"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-field">
+                    <label class="form-label" for="user-phone">Phone</label>
+                    <div class="input-wrapper">
+                        <input class="form-input" id="user-phone" name="user-phone" type="tel" required />
+                        <svg class="icon-telefon" width="18" height="24" aria-hidden="true" focusable="false">
+                            <use href="./images/icons.svg#icon-telefon"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-field">
+                    <label class="form-label" for="user-email">Email</label>
+                    <div class="input-wrapper">
+                        <input class="form-input" id="user-email" name="user-email" type="email" required />
+                        <svg class="icon-letter" width="18" height="24" aria-hidden="true" focusable="false">
+                            <use href="./images/icons.svg#icon-letter"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Comment -->
+                <div class="form-comment">
+                    <label class="form-label" for="user-comment">Comment</label>
+                    <textarea class="form-input form-textarea" id="user-comment" name="user-comment"
+                        placeholder="Text input"></textarea>
+                </div>
+
+                <!-- Checkbox (без изменений) -->
+                <div class="checkbox-wrapper" style="margin-bottom: 24px;">
+                    <input class="visually-hidden agree-checkbox" type="checkbox" id="user-privacy" name="user-privacy"
+                        value="true" required />
+                    <label class="form-agreement" for="user-privacy">
+                        <span class="custom-checkbox">
+                            <svg class="checkbox-icon-privacy" width="10" height="8" aria-hidden="true"
+                                focusable="false">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        </span>
+                        <span>
+                            I accept the terms and conditions outlined in the
+                            <a class="privacy-link" href="#" target="_blank" rel="noopener noreferrer">Privacy
+                                Policy</a>
+                        </span>
+                    </label>
+
+
+
+                </div>
+                <!-- Submit -->
+                <button class="submit-btn" type="submit">Send</button>
+            </form>
+
+            <script>
+                (() => {
+                    const refs = {
+                        openModalBtn: document.querySelector('[data-modal-open]'),
+                        closeModalBtn: document.querySelector('[data-modal-close]'),
+                        modal: document.querySelector('[data-modal]'),
+                        body: document.body,
+                    };
+
+                    refs.openModalBtn.addEventListener('click', toggleModal);
+                    refs.closeModalBtn.addEventListener('click', toggleModal);
+
+                    function toggleModal() {
+                        refs.modal.classList.toggle('is-open');
+                        refs.body.classList.toggle('no-scroll');
+                    }
+                })();
+            </script>
 
 </body>
 
 </html>
+
