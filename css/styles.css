@@ -456,6 +456,7 @@ p {
 .social-container {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .social-title {
