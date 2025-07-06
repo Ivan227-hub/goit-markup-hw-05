@@ -511,27 +511,28 @@
                         placeholder="Text input"></textarea>
                 </div>
 
-                <!-- Checkbox (без изменений) -->
-                <div class="checkbox-wrapper" style="margin-bottom: 24px;">
-                    <input class="visually-hidden agree-checkbox" type="checkbox" id="user-privacy" name="user-privacy"
-                        value="true" required />
-                    <label class="form-agreement" for="user-privacy">
-                        <span class="custom-checkbox">
-                            <svg class="checkbox-icon-privacy" width="10" height="8" aria-hidden="true"
-                                focusable="false">
-                                <use href="./images/icons.svg#icon-check"></use>
-                            </svg>
-                        </span>
-                        I accept the terms and conditions outlined in the
-    <a
-      class="privacy-link"
-      href="#"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Privacy Policy
-    </a>
+               <div class="checkbox-wrapper" style="margin-bottom: 24px;">
+  <input
+    class="agree-checkbox"
+    type="checkbox"
+    id="user-privacy"
+    name="user-privacy"
+    value="true"
+    required
+  />
+  <label class="form-agreement" for="user-privacy">
+    I accept the terms and conditions of the
   </label>
+  <a
+    class="privacy-link"
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="margin-left: 4px;"
+  >
+    Privacy Policy
+  </a>
+
 
 
 
@@ -539,7 +540,7 @@
                 <!-- Submit -->
                 <button class="submit-btn" type="submit">Send</button>
             </form>
-
+</div>
             <script>
                 (() => {
                     const refs = {
