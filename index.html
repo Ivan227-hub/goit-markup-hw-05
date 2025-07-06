@@ -361,54 +361,30 @@
 
     </main>
 
-    <!-- ============================  FOOTER  ============================ -->
-<footer class="footer-links section">
-  <div class="container footer-container"><!-- ♦ головний div‑контейнер усередині footer -->
+    <footer class="footer-links section">
+        <div class="container footer-container">
+            <div class="footer-logo-wrapper">
+                <a class="footer-logo logo" href="./index.html">
+                    Web<span class="logo-part">Studio</span>
+                </a>
+                <p class="footer-text">
+                    Increase the flow of customers and <br> sales for your business with digital<br>
+                    marketing & growth solutions.
+                </p>
+            </div>
 
-    <!-- ---------- ЛОГО + СЛОГАН ---------- -->
-    <div class="footer-logo-wrapper"><!-- ≥3 символи, латиниця, lower‑case -->
-      <a class="footer-logo logo" href="./index.html">
-        Web<span class="logo-part">Studio</span>
-      </a>
-      <p class="footer-text">
-        Increase the flow of customers and <br />
-        sales for your business with digital<br />
-        marketing &amp; growth solutions.
-      </p>
-    </div>
-
-    <!-- ---------- КОНТЕЙНЕР ДЛЯ ФОРМИ ---------- -->
-    <div class="form-container"><!-- ✔ це div‑контейнер, що слугує контейнером для форми -->
-      <!-- ① Перший дочірній елемент — параграф з текстом “Subscribe” -->
-      <p class="subscribe-text">
-        Subscribe
-      </p>
-      <!--  ▼ CSS‑клас .subscribe-text повинен містити:
-            margin-bottom:16px; font-weight:500; font-size:16px; line-height:1.5;
-            letter-spacing:0.02em; color:#ffffff;  -->
-
-      <!-- ② Другий дочірній елемент — form -->
-      <form class="subscribe-form" name="subscribe-form" method="post" action="#">
-        <!--  ▼ CSS‑клас .subscribe-form повинен містити:
-              display:flex; gap:24px;  -->
-
-        <!-- ‑‑‑‑ label (перший елемент форми) ‑‑‑‑ -->
+                       <div class="form-container">
+      <p class="subscribe-text">Subscribe</p>
+      <form class="subscribe-form" name="subscribe" method="post" action="#">
         <label class="subscribe-label">
-          <!--  ▼ всередині label першим іде input -->
           <input
             class="subscribe-input"
             type="email"
-            name="user-email"
+            name="email"
             placeholder="E-mail"
             required
           />
-          <!--  ▼ CSS‑клас .subscribe-input повинен містити всі стилі, перелічені в умові:
-                width:264px; height:40px; border:1px solid #ffffff; background-color:transparent;
-                font-size:12px; line-height:2; letter-spacing:0.04em; padding-left:16px;
-                box-shadow:0px 4px 4px rgba(0,0,0,0.15); border-radius:4px; color:#ffffff;
-                ::placeholder { color:#ffffff; }  -->
         </label>
-        <!-- ‑‑‑‑ button (другий елемент форми) ‑‑‑‑ -->
         <button class="subscribe-btn" type="submit">
           Subscribe
           <svg
@@ -421,52 +397,46 @@
             <use href="./images/icons.svg#icon-send"></use>
           </svg>
         </button>
-        <!--  ▼ CSS‑клас .subscribe-btn повинен містити всі стилі, перелічені в умові:
-              min-width:165px; height:40px; display:flex; justify-content:center; align-items:center;
-              font-family:"Roboto",sans-serif; font-size:16px; font-weight:500; line-height:1.5;
-              letter-spacing:0.04em; color:#ffffff; cursor:pointer; background-color:#4d5ae5;
-              border:none; border-radius:4px;  -->
-        <!--  ▼ CSS‑клас .subscribe-icon повинен містити margin-left:16px; -->
       </form>
     </div>
-    <!-- ▲ form‑container завершено; усі вимоги до структури/класів — виконано -->
 
-    <!-- ---------- БЛОК СОЦМЕРЕЖ ---------- -->
-    <p class="social-title">Social media</p>
-    <ul class="social-list">
-      <li class="social-item">
-        <a class="social-link" href="#">
-          <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-            <use href="./images/icons.svg#icon-instagram"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social-item">
-        <a class="social-link" href="#">
-          <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-            <use href="./images/icons.svg#icon-twitter"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social-item">
-        <a class="social-link" href="#">
-          <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-            <use href="./images/icons.svg#icon-facebook"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social-item">
-        <a class="social-link" href="#">
-          <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
-            <use href="./images/icons.svg#icon-linkedin"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </div><!-- /.footer-container -->
+    <!-- Блок соцмереж -->
+    <div class="social-section">
+      <p class="social-title">Social media</p>
+      <ul class="social-list">
+        <li class="social-item">
+          <a class="social-link" href="#">
+            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="#">
+            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="#">
+            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="#">
+            <svg class="social-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 </footer>
-<!-- ========================= / FOOTER ========================= -->
-
 
     <!-- ========== MODAL ========== -->
     <div class="modal-overlay" data-modal>

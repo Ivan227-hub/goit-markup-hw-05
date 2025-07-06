@@ -452,12 +452,16 @@ p {
 }
 
 .footer-logo-wrapper {
-  margin-right: 120px;
-   flex: 1 1 250px;
+  max-width: 264px;
 }
 
-.form-container {
-   flex: 1 1 250px;
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 0;
 }
 
 .social-title {
@@ -536,7 +540,7 @@ p {
 }
 
 .footer-logo .logo-part {
-  color: var(--footer-text-color, #f4f4fd);
+  color:#ffffff;
 }
 
 .footer-text {
@@ -546,7 +550,9 @@ p {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--footer-text-color);
+  color: #ffffff;
+  text-align: justify;
+
 }
 
 .visually-hidden {
@@ -652,12 +658,19 @@ p {
 }
 
 /* ---------- Subscription form ---------- */
-.form-container {
+/*.subscribe-form-container {
   display: flex;
   flex-direction: column;
   gap: 16px;
 
   /* штовхаємо праворуч */
+/*}*/
+.form-container {
+  max-width: 320px;
+  flex: 1 1 300px;
+   display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .subscribe-text {
@@ -734,6 +747,20 @@ svg {
   height: auto;
 }
 
+/*.social-section {
+  flex: 1 1 200px;
+}
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.social-list {
+  display: flex;
+  gap: 16px;
+  padding-left: 0;
+  list-style: none;
+}*/
 /* ---------- Modal window ---------- */
 .modal {
   position: absolute;
