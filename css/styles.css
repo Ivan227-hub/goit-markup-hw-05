@@ -447,15 +447,17 @@ p {
   display: flex;
   align-items: baseline;
   gap: 120px;
+   justify-content: space-between;
+    gap: 40px;
 }
 
 .footer-logo-wrapper {
   margin-right: 120px;
+   flex: 1 1 250px;
 }
 
-.social-container {
-  display: flex;
-  flex-direction: column;
+.form-container {
+   flex: 1 1 250px;
 }
 
 .social-title {
@@ -465,11 +467,16 @@ p {
   letter-spacing: 0.02em;
   color: var(--footer-text-color, #ffffff);
   margin-bottom: 16px;
+   flex: 1 1 100%;
 }
 
 .social-list {
   display: flex;
   gap: 16px;
+   flex: 1 1 100%;
+   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-item {
