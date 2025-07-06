@@ -610,7 +610,6 @@ p {
 .modal-overlay {
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
-  /* фиксируем по экрану */
   top: 0;
   left: 0;
   opacity: 0;
@@ -618,17 +617,13 @@ p {
   height: 100vh;
   display: flex;
   visibility: hidden;
-  /* flex для центрирования окна */
   justify-content: center;
   align-items: center;
   opacity: 0;
-  /* по умолчанию скрыт */
   pointer-events: none;
-  /* не кликабельный когда скрыт */
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 9999;
-  /* поверх всего */
-}
+  }
 
 .modal-overlay.is-open {
   opacity: 1;
@@ -651,20 +646,12 @@ p {
   padding: 72px 24px 24px;
   box-sizing: border-box;
   overflow-y: auto;
-  /* прокрутка при необходимости */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
 
 }
 
 /* ---------- Subscription form ---------- */
-/*.subscribe-form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  /* штовхаємо праворуч */
-/*}*/
 .form-container {
   max-width: 320px;
   flex: 1 1 300px;
@@ -685,7 +672,7 @@ p {
 .subscribe-form {
   display: flex;
   gap: 24px;
-  
+
 }
 
 .subscribe-input {
@@ -748,20 +735,6 @@ svg {
   height: auto;
 }
 
-/*.social-section {
-  flex: 1 1 200px;
-}
-.subscribe-form {
-  display: flex;
-  gap: 24px;
-}
-
-.social-list {
-  display: flex;
-  gap: 16px;
-  padding-left: 0;
-  list-style: none;
-}*/
 /* ---------- Modal window ---------- */
 .modal {
   position: absolute;
@@ -784,16 +757,13 @@ svg {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
-     padding: 0;
+       padding: 0;
      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-close:hover,
 .modal-close:focus {
   background-color: #404bbf;
- /* border-color: #404bbf;*/
   outline: none;
   border: none; 
 }
@@ -811,8 +781,6 @@ svg {
 .modal-title {
   margin-bottom: 16px;
   font-weight: 500;
-  /*font-size: 20px;*/
-  /*line-height: 1.2;*/
   text-align: center;
   color: #2e2f42;
   font-size: 16px; 
@@ -880,9 +848,7 @@ svg {
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
-  /* чтобы иконка не мешала кликам */
   fill: currentColor;
-  /* чтобы иконка наследовала цвет */
   width: 18px;
   height: 18px;
 }
@@ -924,7 +890,6 @@ input:focus {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--footer-text-color);
-  /* #8e8f99 */
 }
 .form-comment{
 margin-bottom: 16px
@@ -953,11 +918,9 @@ margin-bottom: 16px
 
 .agree-checkbox:checked+.form-agreement .custom-checkbox {
   background-color: var(--accent-color);
-  /* #404bbf */
   border: none;
   fill: var(--icon-fill-color);
-  /* #F4F4FD */
-}
+ }
 
 
 
@@ -1000,10 +963,7 @@ margin-bottom: 16px
 
 .highlight {
   color: #4d5ae5;
-  /* Синий цвет — тот же, что у ссылок */
   font-weight: 500;
-  /* Жирность */
   text-decoration: underline;
-  /* Подчёркивание, если нужно */
    
 }
